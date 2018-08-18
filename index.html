@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>anna fergusson</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    margin: 0;            /* Reset default margin */
+}
+</style>
+</head>
+<body>
+<center>
+<canvas id="canvas" width="100%" height="100%"></canvas>
+</center>
+</body>
+<script>
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
+canvas.width = screen.width*0.9;
+canvas.height = screen.height*0.8;
+
+var fps = 50;
+var colours = ["#deeaee","#eea29a","#c94c4c","#ffffff","#b1cbbb","#000000"];
+var add = 1;
+var directions = [1,1.5,2];
+var max_dot_r = 0.1;
+var dots = [];
+var point_1 = [(1-(2*max_dot_r))*canvas.width*Math.random()+max_dot_r*canvas.width,(1-(2*max_dot_r))*canvas.height*Math.random()+max_dot_r*canvas.height];
+add_dot(point_1);
+draw_dot();
+	
+function add_dot(point_1)
+{
+	shuffle(directions);
+	shuffle(colours);
+	var colour_1 = colours[0];
+	shuffle(colours);
+	var colour_2 = colours[0];
+	var percent = 0;
+	var direction = directions[0];
+	var point_2 = [(1-(2*max_dot_r))*canvas.width*Math.random()+max_dot_r*canvas.width,(1-(2*max_dot_r))*canvas.height*Math.random()+max_dot_r*canvas.height];
+	var r_from = Math.random()*max_dot_r*canvas.width;
+	var r_to = Math.random()*max_dot_r*canvas.width;
+	var dot = {point_1: point_1, point_2: point_2, r_from:r_from, r_to:r_to, percent:percent, direction:direction, colour_1:colour_1, colour_2:colour_2};
+	dots.push(dot);	
+}
+function draw_dot()
+{
+	context.clearRect(0,0,canvas.width,canvas.height);
+	for(var i = 0; i < dots.length; i++)
+	{
+		if (dots[i].percent > 100) {
+			dots[i].percent = dots[i].percent - 100;
+			//reset points
+			dots[i].point_1 = dots[i].point_2;
+			dots[i].point_2 = [(1-(2*max_dot_r))*canvas.width*Math.random()+max_dot_r*canvas.width,(1-2*max_dot_r)*canvas.height*Math.random()+max_dot_r*canvas.height];
+			//reset colour
+			shuffle(colours);
+			dots[i].colour_1 = dots[i].colour_2;
+			dots[i].colour_2 = colours[0];
+			//reset dot size
+			dots[i].r_from = dots[i].r_to;
+			dots[i].r_to = Math.random()*max_dot_r*canvas.width;
+			//reset speed
+			shuffle(directions);
+			dots[i].direction = directions[0];
+			if(dots.length == 10)
+			{
+				add = -1;
+			}
+			if(dots.length == 1)
+			{
+				add = 1;
+			}
+			//add another dot
+			if(dots.length < 10 && i == dots.length - 1)
+			{
+				if(add == 1)
+				{
+					add_dot(dots[i].point_1);
+				}
+			}
+			if(i == dots.length - 1)
+			{
+				if(add == -1)
+				{
+					dots.pop();
+					break;
+				}
+			}
+		};
+		
+		var p = dots[i].percent/100;
+		var r = dots[i].r_from - (p*(dots[i].r_from - dots[i].r_to));
+		if(Math.random>0.5)
+		{
+			points = getQuadraticBezierXYatPercent({
+				x: dots[i].point_1[0],
+				y: dots[i].point_1[1]
+			}, {
+				x: dots[i].point_1[0],
+				y: dots[i].point_2[1]
+			}, {
+				x: dots[i].point_2[0],
+				y: point_2[1]
+			}, p);
+		}
+		else
+		{
+			points = getQuadraticBezierXYatPercent({
+				x: dots[i].point_1[0],
+				y: dots[i].point_1[1]
+			}, {
+				x: dots[i].point_2[0],
+				y: dots[i].point_1[1]
+			}, {
+				x: dots[i].point_2[0],
+				y: dots[i].point_2[1]
+			}, p);
+		}
+		
+		var colour = dots[i].colour_1;
+		var op = 1;
+		//update opacity
+		if(p <=0.5)
+		{
+			op = 1 - p/0.5;
+		}
+		else
+		{
+			op = (p - 0.5)/0.5;
+			colour = dots[i].colour_2;
+		}
+		
+		//draw dot
+		var x = points.x;
+		var y = points.y;
+		context.globalAlpha = op;
+		context.fillStyle = colour;
+		context.beginPath();
+		context.arc(x,y,r, 0, Math.PI*2,false);
+		context.fill();
+		context.closePath();
+		
+		// set the animation position (0-100)
+		dots[i].percent += dots[i].direction;
+	}
+	//repeat
+	setTimeout(function () {
+        requestAnimationFrame(function () {
+        draw_dot();
+    });
+    }, 1000 / fps);
+}
+
+//animation along a curve code from here: http://jsfiddle.net/m1erickson/LumMX/
+// quadratic bezier: percent is 0-1
+function getQuadraticBezierXYatPercent(startPt, controlPt, endPt, percent) {
+    var x = Math.pow(1 - percent, 2) * startPt.x + 2 * (1 - percent) * percent * controlPt.x + Math.pow(percent, 2) * endPt.x;
+    var y = Math.pow(1 - percent, 2) * startPt.y + 2 * (1 - percent) * percent * controlPt.y + Math.pow(percent, 2) * endPt.y;
+    
+//change to straight line
+  x = (endPt.x - startPt.x)*percent + startPt.x;
+  y = (endPt.y - startPt.y)*percent + startPt.y;
+    return ({
+        x: x,
+        y: y
+    });
+}
+function shuffle(array) {
+	var currentIndex = array.length, temporaryValue, randomIndex ;
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+		// Pick a remaining element...
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+		// And swap it with the current element.
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
+	}
+return array;
+}
+</script>
+</html>
