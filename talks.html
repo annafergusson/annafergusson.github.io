@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Talks</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65065542-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65065542-1');
+</script>
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style-all.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img id='logo' style='width: 40px; float:left; margin-right:10px' src='logo.png' /> Anna Fergusson</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="talks.html">Talks</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="privacy-policy.html">Privacy policy</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Talks</h1>
+
+</div>
+
+
+<div id="upcoming-talks" class="section level2">
+<h2>Upcoming talks</h2>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="row">
+<div class="col-xs-7">Towards data science and a more functional way of teaching statistics</div>
+<div class="col-xs-5">AMA/UoA Statistics Teachers' Day (Nov 2018)</div>
+</div>
+</div>
+<div class="panel-body">To be active participants in learning from modern data, our students require greater computational skills. But how do we integrate data science and programming (coding) with respect to statistics at high school, in ways that are accessible, engaging and empowering for all students? In this two-hour workshop, we will explore one sequence of tasks I’ve designed to transition statistics students from using current software to using the statistical programming language R. We’ll use free online tools to explore statistical modelling, considering how to integrate statistical and computational thinking and our complementary roles as learners and teachers. This workshop is for ALL teachers regardless of background or confidence with programming/coding. We will work in pairs, so come along with a friend or make a new one at the workshop! One large-screen device/tablet or laptop will be needed for each pair. [<a href="https://www.stat.auckland.ac.nz/en/for/schools/statistics-teachers-day.html">Event info</a>]</div>
+</div>
+</div>
+<div id="past-talks" class="section level2">
+<h2>Past talks</h2>
+<p>This is not a complete list as there are several workshops from my early teaching years that I can’t find details for.</p>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">57</div>
+<div class="col-xs-6">The power of pixels: Using R to explore and exploit features of images</div>
+<div class="col-xs-3">R-Ladies Auckland Meetup<br />Oct 2018</div>
+<div class="col-xs-2"><a href="https://annafergusson.github.io/powerpixels/">Workshop website</a></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">56</div>
+<div class="col-xs-6">Integrating data science with respect to statistics: Research progress</div>
+<div class="col-xs-3">UoA GRID seminar<br />Sep 2018</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">55</div>
+<div class="col-xs-6">Postcard perfect? Using social media data to explore photos of the Eiffel Tower</div>
+<div class="col-xs-3">UoA Alumni Day Showcase<br />Sep 2018</div>
+<div class="col-xs-2"><a href="https://docs.google.com/presentation/d/e/2PACX-1vRMk-9fFdLJi0Nkg0eEa7uwSe-iqIVSyLMca6fz-ZlDryXsozDoBcrQcYs6P7A-alnxKtAy3LOaMRSf/pub?start=false&loop=false">Talk slides</a></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">54</div>
+<div class="col-xs-6">Large-scale interactives for large-enrolment courses</div>
+<div class="col-xs-3">JSM, Vancouver, Canada<br />Aug 2018</div>
+<div class="col-xs-2"><a href="https://annafergusson.github.io/LSinteractives/">Talk website</a></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">53</div>
+<div class="col-xs-6">Meeting Within a Meeting: High school sessions (Exploratory data analysis and the randomisation test)</div>
+<div class="col-xs-3">JSM, Vancouver, Canada<br />Aug 2018</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">52</div>
+<div class="col-xs-6">Exploring modern data in a large introductory statistic course</div>
+<div class="col-xs-3">ICOTS, Kyoto, Japan<br />Jul 2018</div>
+<div class="col-xs-2"><a href="https://annafergusson.github.io/paristergram/">Talk website</a></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">51</div>
+<div class="col-xs-6">ASA international collaborations to promote statistics at the school level</div>
+<div class="col-xs-3">ICOTS, Kyoto, Japan<br />Jul 2018</div>
+<div class="col-xs-2"><a href="https://docs.google.com/presentation/d/e/2PACX-1vRVSmva6iLorm5S1rQ5psytF--jLmnS15uBuGeBtFBSQGw2UV7_nHrT2D40QugJD3OEmloAKmU7QfOa/pub?start=false&loop=false">Talk slides</a></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">50</div>
+<div class="col-xs-6">Teaching with modern data: Full day workshop</div>
+<div class="col-xs-3">UoA<br />Dec 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">49</div>
+<div class="col-xs-6">Towards an informal test for goodness-of-fit</div>
+<div class="col-xs-3">NZSA Conference, Auckland<br />Nov 2017</div>
+<div class="col-xs-2"><a href="https://docs.google.com/presentation/d/e/2PACX-1vRsVJM8kEzOWUOFL7mcEKSxGHl7tjgVbtjwCvwUljiK2t4o2ndvgZbai7M0Xb0xUprP4ODxJfX9oslw/pub?start=false&loop=false">Talk slides</a></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">48</div>
+<div class="col-xs-6">The power of pixels</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">47</div>
+<div class="col-xs-6">To code or not to code</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">46</div>
+<div class="col-xs-6">Teaching with modern data: A crash course</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">45</div>
+<div class="col-xs-6">All models are wrong, but some are more wrong than others: 
+Informally assessing the fit of probability distribution models
+</div>
+<div class="col-xs-3">OMA Teachers' Day<br />Nov 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">44</div>
+<div class="col-xs-6">Data and probability OR probability and data?
+Using data to teach probability modelling
+</div>
+<div class="col-xs-3">OMA Teachers' Day<br />Nov 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">43</div>
+<div class="col-xs-6">Stimulating simulations through code: Harnessing the power of statistical and algorithmic thinking
+</div>
+<div class="col-xs-3">OMA Teachers' Day<br />Nov 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">42</div>
+<div class="col-xs-6">All models are wrong, but some are more wrong than others: 
+Informally assessing the fit of probability distribution models
+</div>
+<div class="col-xs-3">NZAMT Conference, Christchurch<br />Oct 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">41</div>
+<div class="col-xs-6">Data and probability OR probability and data?
+Using data to teach probability modelling
+</div>
+<div class="col-xs-3">NZAMT Conference, Christchurch<br />Oct 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">40</div>
+<div class="col-xs-6">Stimulating simulations through code: Harnessing the power of statistical and algorithmic thinking
+</div>
+<div class="col-xs-3">NZAMT Conference, Christchurch<br />Oct 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">39</div>
+<div class="col-xs-6">The power of pixels: Modelling with images (Plenary)</div>
+<div class="col-xs-3">AMA workshops<br />Sep 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">38</div>
+<div class="col-xs-6">Meeting Within a Meeting: High school sessions (Exploratory data analysis and the randomisation test)</div>
+<div class="col-xs-3">JSM, Baltimore, USA<br />Aug 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">37</div>
+<div class="col-xs-6">Statistical reasoning with data cards (Webinar)</div>
+<div class="col-xs-3">ASA K-12 Statistics Education Webinar<br />Apr 2017</div>
+<div class="col-xs-2"><a href="http://www.amstat.org/asa/education/K-12-Statistics-Education-Webinars.aspx">Webinar recording</a></div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">36</div>
+<div class="col-xs-6">Apply probability concepts or probability distributions to solve problems: Using data and simulation to teach probability modelling (AS91585/AS91586)</div>
+<div class="col-xs-3">AMA workshops<br />Apr 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">35</div>
+<div class="col-xs-6">Evaluate statistically-based reports: Developing learning and formative assessment tasks (AS91584)</div>
+<div class="col-xs-3">AMA workshops<br />Apr 2017</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">34</div>
+<div class="col-xs-6">Using technology to design and carry out experiments online</div>
+<div class="col-xs-3">OMA Teachers' Day<br />Dec 2016</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">33</div>
+<div class="col-xs-6">Using data challenges to encourage statistical thinking</div>
+<div class="col-xs-3">OMA Teachers' Day<br />Dec 2016</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">32</div>
+<div class="col-xs-6">All models are wrong but some are more wrong than others</div>
+<div class="col-xs-3">OMA Teachers' Day<br />Dec 2016</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">31</div>
+<div class="col-xs-6">All models are wrong but some are more wrong than others</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2016</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">30</div>
+<div class="col-xs-6">Meeting Within a Meeting: High school sessions (Exploratory data analysis and the randomisation test)</div>
+<div class="col-xs-3">JSM, Chicago, USA<br />Aug 2016</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">29</div>
+<div class="col-xs-6">Developing engaging statistical modelling activities: Where do you start?</div>
+<div class="col-xs-3">AMA workshops<br />Apr 2016</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">28</div>
+<div class="col-xs-6">10 ways to embrace the awesomeness that is our statistics curriculum (Plenary)</div>
+<div class="col-xs-3">CMA Statistics Teachers' Day<br />Nov 2015</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">27</div>
+<div class="col-xs-6">Using data challenges to encourage statistical thinking</div>
+<div class="col-xs-3">CMA Statistics Teachers' Day<br />Nov 2015</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">26</div>
+<div class="col-xs-6">Using data challenges to encourage statistical thinking</div>
+<div class="col-xs-3">UoA/AMA Statistics Teachers' Day<br />Nov 2015</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">25</div>
+<div class="col-xs-6">Stimulating simulations</div>
+<div class="col-xs-3">NZAMT Conference, Auckland<br />Jul 2015</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">24</div>
+<div class="col-xs-6">Probability distributions: What are the big ideas and how do we effectively teach them?</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2014</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">23</div>
+<div class="col-xs-6">Conducting and assessing experiments</div>
+<div class="col-xs-3">UoA Statistics Road Tour (Dunedin, Christchurch, Wellington, Auckland)<br />Nov 2012</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">22</div>
+<div class="col-xs-6">Experiments at CL7 and CL8 (Three evening workshops)</div>
+<div class="col-xs-3">Cognition Education<br />Oct 2012</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">21</div>
+<div class="col-xs-6">Scholarship Statistics Day: Full day workshop</div>
+<div class="col-xs-3">Waikato Mathematics Association<br />Aug 2012</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">20</div>
+<div class="col-xs-6">Literacy and thinking in mathematics and statistics</div>
+<div class="col-xs-3">AMA HOD Day<br />May 2012</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">19</div>
+<div class="col-xs-6">Randomisation test</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2011</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">18</div>
+<div class="col-xs-6">Questionnaire design</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2011</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">17</div>
+<div class="col-xs-6">Experiments at CL7</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2011</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">16</div>
+<div class="col-xs-6">Literacy and thinking with bivariate data investigations</div>
+<div class="col-xs-3">Auckland HOD Meeting<br />Nov 2011</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">15</div>
+<div class="col-xs-6">Scholarship Statistics Day: Full day workshop</div>
+<div class="col-xs-3">Waikato Mathematics Association<br />Aug 2011</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">14</div>
+<div class="col-xs-6">Scholarship Statistics Day: Full day workshop</div>
+<div class="col-xs-3">Waikato Mathematics Association<br />Aug 2010</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">13</div>
+<div class="col-xs-6">An example of how SOLO was used to explore the concept of statistical measures</div>
+<div class="col-xs-3">NZAMT Conference, Palmerston North<br />Sep 2009</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">12</div>
+<div class="col-xs-6">Statistical literacy at CL8</div>
+<div class="col-xs-3">NZAMT Conference, Palmerston North<br />Sep 2009</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">11</div>
+<div class="col-xs-6">Statistical investigations at CL8</div>
+<div class="col-xs-3">NZAMT Conference, Palmerston North<br />Sep 2009</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">10</div>
+<div class="col-xs-6">Year 13 statistics course design</div>
+<div class="col-xs-3">NZAMT Conference, Palmerston North<br />Sep 2009</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">9</div>
+<div class="col-xs-6">Scholarship Statistics Day: Full day workshop</div>
+<div class="col-xs-3">Waikato Mathematics Association<br />Aug 2009</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">8</div>
+<div class="col-xs-6">Scholarship Statistics Symposium</div>
+<div class="col-xs-3">Massey University<br />Jul 2009</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">7</div>
+<div class="col-xs-6">Statistical literacy: From curriculum to teaching and learning</div>
+<div class="col-xs-3">AMA HOD day<br />May 2009</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">6</div>
+<div class="col-xs-6">Experiments at CL8</div>
+<div class="col-xs-3">AMA workshops<br />Apr 2009</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">5</div>
+<div class="col-xs-6">Cross-strand investigations: Telepathic or just pathetic?</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2008</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">4</div>
+<div class="col-xs-6">Scholarship Statistics Day: Full day workshop</div>
+<div class="col-xs-3">Waikato Mathematics Association<br />Aug 2008</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">3</div>
+<div class="col-xs-6">Resampling and confidence intervals</div>
+<div class="col-xs-3">AMA workshops<br />Jun 2008</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">2</div>
+<div class="col-xs-6">Assessing confidence in confidence intervals</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2007</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-1">1</div>
+<div class="col-xs-6">Randomisation at CL8</div>
+<div class="col-xs-3">AMA/UoA Statistics Teachers' Day<br />Nov 2006</div>
+<div class="col-xs-2">-</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
