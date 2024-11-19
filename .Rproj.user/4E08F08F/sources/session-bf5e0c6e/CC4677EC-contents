@@ -1,0 +1,83 @@
+---
+title: "Dr Anna Fergusson <br><small>Data science and statistics education researcher</small>"
+image: "anna_cat.png"
+links:
+  - label: Profile
+    url: "https://profiles.auckland.ac.nz/a-fergusson"
+  - label: Blog
+    url: "https://teaching.statistics-is-awesome.org"
+  - label: Google Scholar
+    url: "https://scholar.google.co.nz/citations?user=XGVGHOsAAAAJ&hl=en"
+  - label: BlueSky
+    url: "https://bsky.app/profile/annafergusson.bsky.social"
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/anna-fergusson-nz/"
+  - label: GitHub
+    url: "https://github.com/annafergusson"
+output:
+  postcards::trestles:
+favicon: favicon.ico
+---
+
+```{css echo=FALSE}
+body {
+  background-color: #EFE2DA;
+}
+
+small {
+ font-size: 0.5em;
+}
+
+mark {
+  background-color: #F0F0F0;
+}
+
+.outline {
+  border: black solid 1px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #F0F0F0;
+}
+
+.outline p {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.talks a {
+  font-weight: bold;
+  background-color: #F0F0F0;
+  color: black;
+}
+```
+ 
+## Bio
+
+Anna Fergusson is passionate about teaching, data technologies, and developing ways to introduce people to learning statistics and data science that are inclusive, engaging, accessible, effective and fun. She has led several statistics and data science curriculum design projects, and supports and advances her teaching, research and data analysis activities by creating new software tools and educational technologies. Anna’s research specialty is data science and statistics education, with a focus on technology-based and technology-informed pedagogy, including but not limited to: large-scale teaching and assessment practices and tools; introduction of computer programming for data science and associated design principles for tool and task design; tool-mediated development of statistical concepts and reasoning, such as graphical and visual inference; frameworks for observable integrated statistical and computational thinking practices; and designing professional development opportunities for high school data science teachers.
+
+## 2024 talks/workshops
+
+:::talks
+### Past  
+- Embracing creativity through explorations in probability and modelling, June 2024, [AMA online](https://www.aucklandmaths.org.nz/amaonline-2024-term-2-june-8th/){target="blank"}
+- Data science doesn't happen in a vaccuum: An initial exploration of high school statistic teachers’ data practices with messy data, July 2024, **IASE 2024 Roundtable Conference**
+- Towards a framework for assessing integrated statistical and computational thinking, July 2024, **ICME**
+- From sketchy intuitions to imperfect rules: Using digital image data from drawings (sketches) to introduce informal classification models, July 2024, [MWM/ASA](https://www.amstat.org/education/mwm/home){target="blank"}
+- Go big or go home: Innovations in large scale assessment practice, August 2024, **JSM**
+- Data Science Unplugged: Integrating statistical and computational thinking to learn from data, without computers (mostly), August 2024, **NMA**
+- The data science of drawings!, August 2024, **UoA Computer Science outreach event**
+- Designing positive first experiences with coding for introductory level statistics and data science students, October 2024, [IASE webinar](https://iase-web.org/Webinars.php?p=241022_2000){target="blank"}
+- Developing tools for “real time” formative assessment of writing within large introductory statistics and data science courses, October 2024, [WOMBAT 2024](https://wombat2024.numbat.space/education.html){target="blank"}
+- Data Science Unplugged: Integrating statistical and computational thinking to learn from data, without computers (mostly), November 2024, **BOPMA**
+
+### Upcoming   
+- Lost (and found) in translation: Examining the diversity and impact of languages selected on student responses to a statistical investigation of automated language translation, November/December 2024, **NZARE/NZSA conferences**
+- Engaging with data through education research!, November 2024, **UoA/AMA Statistics Teachers' Day**
+- Using grayscale photos to introduce high school statistics teachers to reasoning with digital image data, December 2024, **JSDSE/CAUSE webinar**
+- Introducing a data science perspective on predictive modelling within a large introductory statistics course: Connecting research with practice, December 2024, [ProDaBi Colloqium](https://www.prodabi.de/en/termine-colloquium/session-16-part-1-anna-ferguson-new-zealand/){target="blank"}
+:::
